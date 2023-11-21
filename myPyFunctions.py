@@ -29,6 +29,7 @@ def create_num_list(iranges):
     Zhiyong Wu 2023/09
     '''
 
+    import itertools
     # intiate the number list
     numbers = []
 
@@ -37,3 +38,9 @@ def create_num_list(iranges):
             numbers.append(i)
 
     return numbers
+
+def get_majority_element(xlist):
+    from collections import Counter
+    cnt = Counter(xlist)
+    value, count = cnt.most_common()[0]
+    return (value, count) 
